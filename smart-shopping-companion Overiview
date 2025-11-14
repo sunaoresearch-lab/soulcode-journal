@@ -1,0 +1,249 @@
+# 🛒 Smart Shopping Companion
+
+> A personal tool to save money through intelligent price tracking and store comparison.
+
+## 📖 The Story
+
+I created this app because flyer shopping was eating hours of my time—jumping between stores, manually converting units, forgetting what I paid last week. This app is my solution, built during my 90-day journey to AI-technical fluency.
+
+## ✨ Vision
+
+A mobile-first shopping app that:
+- **Tracks price history** - Never forget what you usually pay
+- **Converts units automatically** - Compare $/100g across all stores
+- **Compares stores** - See which store saves you the most TODAY
+- **Optimizes trips** - Is store-hopping worth the savings?
+- **Learns over time** - Your personal price intelligence database
+
+## 🎯 Core Features (Phase 1 - MVP)
+
+### Must-Have (Weeks 1-8)
+- [ ] Create and manage multiple shopping lists
+- [ ] Add items with price, unit, store, date
+- [ ] Automatic unit price conversion ($/100g, $/lb, $/kg)
+- [ ] Price history tracking per item
+- [ ] Store comparison dashboard
+- [ ] Cost estimation per list
+
+### Nice-to-Have (Weeks 9-12)
+- [ ] Trip optimizer (single vs. multi-store)
+- [ ] Visual price history graphs
+- [ ] Urgency tagging system
+- [ ] Mobile-responsive design
+- [ ] Cloud sync across devices
+
+## 🚀 Phase 2 Vision (Days 91-180)
+- OCR flyer scanning
+- Recipe import
+- AI-powered suggestions
+- Family sharing
+- Premium features
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+- React (UI components)
+- Tailwind CSS (styling)
+- Recharts (price graphs)
+
+**Backend:**
+- Firebase (database + hosting + auth)
+- Firestore (data storage)
+
+**Tools:**
+- GitHub (version control & journal)
+- Replit or Cursor (development)
+- Notion (learning log)
+
+## 📚 Learning Journey
+
+This project is my **Bridge Project** in my 90-day AI fluency journey. I'm learning:
+- Web fundamentals (HTML, CSS, JavaScript)
+- React for building interactive UIs
+- Firebase for backend services
+- API integration and data flows
+- AI orchestration for future features
+
+### Progress Tracker
+- **Week 1**: Setup + Architecture + HTML/CSS mockups
+- **Week 2**: JavaScript basics + Interactive forms
+- **Week 3**: React fundamentals + Component building
+- **Week 4**: Firebase integration + First database saves
+- [More weeks to be added as I progress...]
+
+## 📊 Architecture
+```
+User Input → React Form → Firebase Functions → Firestore Database
+     ↓           ↓              ↓                    ↓
+  Mobile UI   State Mgmt   Unit Conversion    Price History
+                            Store Comparison   User Data
+```
+
+## 💡 Key Differentiators
+
+| Feature | Flipp | My App |
+|---------|-------|--------|
+| View flyers | ✓ | Manual (Phase 1) |
+| Store price comparison | ✗ | ✓ **Yes** |
+| Historical price tracking | ✗ | ✓ **Yes** |
+| Unit price conversion | ✗ | ✓ **Yes** |
+| Trip optimizer | ✗ | ✓ **Yes** |
+
+## 📝 Daily Log
+
+### Day 1 - [Date]
+- ✅ Created GitHub repository
+- ✅ Wrote project vision
+- ✅ Drew architecture diagram
+- 🎯 Tomorrow: Build first HTML mockup
+
+[Continue logging daily progress...]
+
+## 🎓 What I'm Learning
+
+### Senior Engineer Mindset
+- How to think about full-stack architecture
+- Data modeling and security considerations
+- Code review and iteration practices
+- Breaking big problems into small, testable pieces
+
+### Technical Skills
+- Git version control
+- React component design
+- Database structure planning
+- API integration patterns
+
+## 🙏 Why This Matters
+
+This isn't just a coding project—it's a tool born from necessity. I'm experiencing financial challenges, and every dollar saved matters. By building this, I'm:
+1. Solving my own real problem
+2. Learning valuable technical skills
+3. Creating something I can share with others who need it
+4. Building toward AI-fluent entrepreneurship
+
+The free tier will always include core money-saving features because I understand what it's like to need every dollar.
+
+## 📫 Connect
+
+This is a learning journey in public. Follow along as I document every step, every breakthrough, and every challenge.
+
+---
+
+**Built with intention by Sunao** 🌙
+*"From necessity to creation, from learning to mastery."*
+```
+
+**After pasting, click "Commit changes"** with message: `"Initial commit: Project vision and roadmap"`
+
+---
+
+## 🎯 Part C: Architecture Diagram
+
+### **Option 1: Draw by Hand (Recommended for Day 1)**
+
+Get a piece of paper and draw this:
+```
+┌─────────────────────────────────────────────────────┐
+│                     USER                             │
+│              (You, on your phone)                    │
+└───────────────────┬─────────────────────────────────┘
+                    │
+                    ▼
+┌─────────────────────────────────────────────────────┐
+│                  FRONTEND                            │
+│              (React Web App)                         │
+│                                                      │
+│  ┌──────────┐  ┌───────────┐  ┌─────────────┐     │
+│  │  Add     │  │  View     │  │   Store     │     │
+│  │  Item    │  │  Lists    │  │ Comparison  │     │
+│  │  Form    │  │           │  │  Dashboard  │     │
+│  └──────────┘  └───────────┘  └─────────────┘     │
+└───────────────────┬─────────────────────────────────┘
+                    │
+                    ▼
+┌─────────────────────────────────────────────────────┐
+│                  BACKEND                             │
+│         (Firebase Cloud Functions)                   │
+│                                                      │
+│  • Unit Price Conversion Logic                      │
+│  • Store Comparison Calculator                      │
+│  • Price History Aggregator                         │
+│  • Security Rules                                   │
+└───────────────────┬─────────────────────────────────┘
+                    │
+                    ▼
+┌─────────────────────────────────────────────────────┐
+│                  DATABASE                            │
+│            (Cloud Firestore)                         │
+│                                                      │
+│  users/                                             │
+│    └─ {userId}/                                     │
+│         ├─ lists/                                   │
+│         │   └─ {listId}                             │
+│         │       ├─ name: "Groceries"                │
+│         │       └─ items/                           │
+│         │           └─ {itemId}                     │
+│         │               ├─ name: "Milk"             │
+│         │               ├─ price: 4.99              │
+│         │               ├─ unit: "L"                │
+│         │               ├─ store: "Walmart"         │
+│         │               ├─ date: "2024-11-14"       │
+│         │               └─ priceHistory: [...]      │
+│         └─ settings/                                │
+└─────────────────────────────────────────────────────┘
+```
+
+**Label the arrows:**
+- User → Frontend: "Inputs data, views results"
+- Frontend → Backend: "Sends data, requests calculations"
+- Backend → Database: "Saves items, fetches history"
+
+Take a photo of this and save it in your Notion page!
+
+---
+
+### **Option 2: Digital Diagram (Use Excalidraw)**
+
+1. Go to [excalidraw.com](https://excalidraw.com)
+2. Draw the same diagram using rectangles and arrows
+3. Save as PNG
+4. Upload to your GitHub repo in a `/docs` folder
+
+---
+
+### **Data Model Diagram (Important!)**
+
+On another page, draw your data structure:
+```
+ITEM DATA MODEL
+┌─────────────────────────────────┐
+│ Item                            │
+├─────────────────────────────────┤
+│ id: string (auto-generated)     │
+│ name: string                    │
+│ price: number                   │
+│ quantity: number                │
+│ unit: string (lb, kg, L, etc)   │
+│ store: string                   │
+│ category: string (optional)     │
+│ urgency: string (optional)      │
+│ listId: string                  │
+│ userId: string                  │
+│ createdAt: timestamp            │
+│ updatedAt: timestamp            │
+└─────────────────────────────────┘
+           │
+           │ Has many
+           ▼
+┌─────────────────────────────────┐
+│ PriceHistory                    │
+├─────────────────────────────────┤
+│ itemId: string                  │
+│ price: number                   │
+│ store: string                   │
+│ date: timestamp                 │
+│ unitPrice: object               │
+│   ├─ per100g: number            │
+│   ├─ perLb: number              │
+│   └─ perKg: number              │
+└─────────────────────────────────┘
